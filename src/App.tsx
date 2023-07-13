@@ -2,7 +2,8 @@ import React, { useState } from 'react'
 import './App.css'
 import Input from './components/input'
 import { PasswordStrength, getPasswordStrength } from './utils/getPasswordStrength'
-import StatusBar from './components/statusBar'
+import StatusBar from './components/statusBars/statusBar'
+import StatusBars from './components/statusBars'
 
 function App() {
   const [passwordStrength, setPasswordStrength] = useState<PasswordStrength>('empty')
@@ -16,7 +17,7 @@ function App() {
     <div className='App'>
       <header className='App-header'>
         <Input onChange={handleInputChange} />
-        <StatusBar color='red' />
+        <StatusBars status={passwordStrength} />
         <p>Password strength is {passwordStrength}</p>
       </header>
     </div>
