@@ -1,9 +1,13 @@
-import React, { useState } from 'react'
-import Input from './components/input'
-import { PasswordStrength, getPasswordStrength } from './utils/getPasswordStrength'
-import StatusBars from './components/statusBars'
-
+import { useState } from 'react'
 import classnames from 'classnames/bind'
+
+import Input from './components/input'
+import {
+  PasswordStrength,
+  getPasswordStrength,
+  getPasswordStrengthDescription,
+} from './utils/getPasswordStrength'
+import StatusBars from './components/statusBars'
 
 import styles from './App.module.scss'
 const cx = classnames.bind(styles)
@@ -16,13 +20,15 @@ function App() {
     setPasswordStrength(strength)
   }
 
+  const passwordStrengthDescription = getPasswordStrengthDescription(passwordStrength)
+
   return (
     <div className={cx('App')}>
       <header className={cx('App-header')}>
         <div className={cx('container')}>
           <Input onChange={handleInputChange} label='password' type='password' name='password' />
           <StatusBars status={passwordStrength} />
-          <p>Password strength is {passwordStrength}</p>
+          <p>{passwordStrengthDescription}</p>
         </div>
       </header>
     </div>

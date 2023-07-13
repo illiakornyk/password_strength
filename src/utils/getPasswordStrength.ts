@@ -13,3 +13,18 @@ export function getPasswordStrength(value: string): PasswordStrength {
     return 'medium'
   }
 }
+
+export function getPasswordStrengthDescription(strength: PasswordStrength): string {
+  switch (strength) {
+    case 'empty':
+      return 'Please enter a password'
+    case 'too short':
+      return 'Your password is too short'
+    case 'easy':
+      return 'Your password is easy to guess'
+    case 'medium':
+      return 'Your password is of medium strength'
+    case 'strong':
+      return 'Your password is strong'
+  }
+}
