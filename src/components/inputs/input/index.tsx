@@ -3,7 +3,7 @@ import classnames from 'classnames/bind'
 import styles from './styles.module.scss'
 const cx = classnames.bind(styles)
 
-interface InputProps {
+export interface InputProps {
   placeholder?: string
   label?: string
   required?: boolean

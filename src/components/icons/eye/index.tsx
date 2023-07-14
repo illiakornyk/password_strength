@@ -3,9 +3,10 @@ import React from 'react'
 interface EyeIconProps {
   size?: string
   color?: string
+  onClick?: () => void
 }
 
-const EyeIcon: React.FC<EyeIconProps> = ({ size = '1rem', color = '#1C274C' }) => {
+const EyeIcon: React.FC<EyeIconProps> = ({ size = '1rem', color = '#1C274C', onClick }) => {
   return (
     <svg
       width={size}
@@ -13,6 +14,7 @@ const EyeIcon: React.FC<EyeIconProps> = ({ size = '1rem', color = '#1C274C' }) =
       viewBox='0 0 24 24'
       fill='none'
       xmlns='http://www.w3.org/2000/svg'
+      onClick={onClick}
     >
       <path
         opacity='0.5'
