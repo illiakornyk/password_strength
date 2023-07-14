@@ -1,0 +1,13 @@
+.status-bars {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.status-bars > div {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.status-bars > div:not(:last-child) {
+  border-right: 2px solid black;
+}

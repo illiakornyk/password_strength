@@ -13,3 +13,15 @@ export function getPasswordStrength(value: string): PasswordStrength {
     return 'medium'
   }
 }
+
+const passwordStrengthDescriptions: Record<PasswordStrength, string> = {
+  empty: 'Please enter a password',
+  'too short': 'Your password is too short',
+  easy: 'Your password is easy to guess',
+  medium: 'Your password is of medium strength',
+  strong: 'Your password is strong',
+}
+
+export function getPasswordStrengthDescription(strength: PasswordStrength): string {
+  return passwordStrengthDescriptions[strength]
+}
