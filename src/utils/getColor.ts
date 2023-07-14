@@ -1,17 +1,14 @@
 import { PasswordStrength } from 'utils/getPasswordStrength'
 export type SectionColors = 'gray' | 'red' | 'yellow' | 'green'
 
+const passwordStrengthColors: Record<PasswordStrength, SectionColors[]> = {
+  empty: ['gray', 'gray', 'gray'],
+  'too short': ['red', 'red', 'red'],
+  easy: ['red', 'gray', 'gray'],
+  medium: ['yellow', 'yellow', 'gray'],
+  strong: ['green', 'green', 'green'],
+}
+
 export const getColors = (status: PasswordStrength): SectionColors[] => {
-  switch (status) {
-    case 'empty':
-      return ['gray', 'gray', 'gray']
-    case 'too short':
-      return ['red', 'red', 'red']
-    case 'easy':
-      return ['red', 'gray', 'gray']
-    case 'medium':
-      return ['yellow', 'yellow', 'gray']
-    case 'strong':
-      return ['green', 'green', 'green']
-  }
+  return passwordStrengthColors[status]
 }

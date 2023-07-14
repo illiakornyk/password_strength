@@ -19,11 +19,11 @@ const PasswordInput: React.FC<PasswordInputProps> = (props) => {
     <div className={cx('password-input')}>
       <Input {...props} type={passwordVisible ? 'text' : 'password'} />
       {passwordVisible ? (
-        <span className={cx('password-input', 'password-input__closed-eye-icon')}>
+        <span className={cx('password-input__icon', 'password-input__closed-eye-icon')}>
           <ClosedEyeIcon onClick={handleToggleVisibility} size='1.5rem' />
         </span>
       ) : (
-        <span className={cx('password-input', 'password-input__eye-icon')}>
+        <span className={cx('password-input__icon', 'password-input__eye-icon')}>
           <EyeIcon onClick={handleToggleVisibility} size='1.5rem' />
         </span>
       )}

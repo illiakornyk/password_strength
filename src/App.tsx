@@ -27,15 +27,17 @@ function App() {
     <div className={cx('App')}>
       <header className={cx('App-header')}>
         <div className={cx('container')}>
-          <PasswordInput
-            onChange={handleInputChange}
-            label='password'
-            type='password'
-            name='password'
-          />
-          <StatusBars status={passwordStrength} />
-          <p>{passwordStrengthDescription}</p>
-          <EyeIcon />
+          <form>
+            <PasswordInput
+              onChange={handleInputChange}
+              label='password'
+              type='password'
+              name='password'
+            />
+            <StatusBars status={passwordStrength} />
+            <p>{passwordStrengthDescription}</p>
+            <EyeIcon />
+          </form>
         </div>
       </header>
     </div>

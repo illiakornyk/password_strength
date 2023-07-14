@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import classnames from 'classnames/bind'
 import styles from './styles.module.scss'
 const cx = classnames.bind(styles)
@@ -22,10 +22,7 @@ const Input: React.FC<InputProps> = ({
   name,
   type = 'text',
 }) => {
-  const [value, setValue] = useState('')
-
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setValue(event.target.value)
     onChange(event.target.value)
   }
 
@@ -34,7 +31,6 @@ const Input: React.FC<InputProps> = ({
       <input
         type={type}
         className={cx('input')}
-        value={value}
         onChange={handleChange}
         placeholder={placeholder}
         required={required}

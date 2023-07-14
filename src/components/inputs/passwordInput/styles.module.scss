@@ -2,6 +2,10 @@
   position: relative;
 }
 
+.password-input__icon {
+  background: inherit;
+}
+
 .password-input__closed-eye-icon,
 .password-input__eye-icon {
   position: absolute;
