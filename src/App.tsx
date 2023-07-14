@@ -5,12 +5,12 @@ import {
   PasswordStrength,
   getPasswordStrength,
   getPasswordStrengthDescription,
-} from './utils/getPasswordStrength'
-import StatusBars from './components/statusBars'
+} from 'utils/getPasswordStrength'
+import StatusBars from 'components/statusBars'
 
 import styles from './App.module.scss'
-import EyeIcon from './components/icons/eye'
-import PasswordInput from './components/inputs/passwordInput'
+import EyeIcon from 'components/icons/eye'
+import PasswordInput from 'components/inputs/passwordInput'
 const cx = classnames.bind(styles)
 
 function App() {

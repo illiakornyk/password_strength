@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import classnames from 'classnames/bind'
 import styles from './styles.module.scss'
-import Input, { InputProps } from '../input'
-import ClosedEyeIcon from '../../icons/closedEye'
-import EyeIcon from '../../icons/eye'
+import Input, { InputProps } from 'components/inputs/input'
+import ClosedEyeIcon from 'components/icons/closedEye'
+import EyeIcon from 'components/icons/eye'
 const cx = classnames.bind(styles)
 
 type PasswordInputProps = InputProps

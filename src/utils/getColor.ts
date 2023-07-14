@@ -1,4 +1,4 @@
-import { PasswordStrength } from './getPasswordStrength'
+import { PasswordStrength } from 'utils/getPasswordStrength'
 export type SectionColors = 'gray' | 'red' | 'yellow' | 'green'
 
 export const getColors = (status: PasswordStrength): SectionColors[] => {

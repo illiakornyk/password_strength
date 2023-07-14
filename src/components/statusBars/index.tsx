@@ -2,9 +2,9 @@ import React from 'react'
 import classnames from 'classnames/bind'
 
 import styles from './styles.module.scss'
-import { PasswordStrength } from '../../utils/getPasswordStrength'
-import StatusBar from './statusBar'
-import { getColors } from '../../utils/getColor'
+import { PasswordStrength } from 'utils/getPasswordStrength'
+import StatusBar from 'components/statusBars/statusBar'
+import { getColors } from 'utils/getColor'
 const cx = classnames.bind(styles)
 
 interface StatusBarsProps {
