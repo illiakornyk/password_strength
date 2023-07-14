@@ -10,6 +10,7 @@ import {
 import StatusBars from './components/statusBars'
 
 import styles from './App.module.scss'
+import EyeIcon from './components/icons/eye'
 const cx = classnames.bind(styles)
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
           <Input onChange={handleInputChange} label='password' type='password' name='password' />
           <StatusBars status={passwordStrength} />
           <p>{passwordStrengthDescription}</p>
+          <EyeIcon />
         </div>
       </header>
     </div>
